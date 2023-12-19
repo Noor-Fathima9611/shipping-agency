@@ -1,0 +1,738 @@
+<!--
+Item Name: BuyJotun
+Author: Aireddy DineshReddy
+Version: 1.0
+Copyright 2023
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Delta Shipping</title>
+    <meta name="keywords"
+        content="">
+    <meta name="description" content="Multipurpose eCommerce HTML Template">
+    <meta name="author" content="Aireddy DineshReddy">
+
+    <!-- site Favicon -->
+    <link rel="icon" href="assets/img/favicon/logo (2).ico" sizes="32x32">
+
+    <!-- css Icon Font -->
+    <link rel="stylesheet" href="assets/css/vendor/gicons.css">
+     <link rel="stylesheet" id="main_style" href="assets/css/style.css">
+
+    <!-- css All Plugins Files -->
+    <link rel="stylesheet" href="assets/css/plugins/animate.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/slick.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/nouislider.css">
+
+    <!-- Main Style -->
+    <link rel="stylesheet" id="main_style" href="assets/css/demo-1.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+      
+    
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+        /* background: #101224; */
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .world-map {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1em;
+        position: relative;
+      }
+      
+      /* .world-map img {
+        width: 50%;
+        height: 50%;
+        object-fit: contain;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-width: 100%; max-height: 100%
+      } */
+      /* .india-map-img {
+        width: 80%;
+        height: 100%;
+        object-fit: contain;
+        align-items: center;
+      } */
+      .title {
+        text-align: center;
+        color: #fff;
+        margin: 2em 0;
+        padding: 0 1em;
+      }
+      .title p {
+        max-width: 500px;
+        margin: 1em auto;
+        line-height: 27px;
+      }
+      .pin {
+        background: #4362f8;
+        position: absolute;
+        width: 0.7em;
+        height: 0.7em;
+        border-radius: 50%;
+      }
+      .pin::before {
+        content: "";
+        background: #4362f8;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        animation: pulse 1.3s ease-in-out infinite;
+      }
+      .pin span {
+        display: inline-block;
+        white-space: nowrap;
+        position: absolute;
+        left: 1.5em;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #fff;
+        border-radius: 3em;
+        padding: 0.3em 0.6em;
+        font-size: 0.9em;
+      }
+      .pin.Qatar {
+          top: 47%; /* Adjust the top percentage */
+        left: 54%; /* Adjust the left percentage */
+
+      }
+      
+
+      .pin.Kochi {
+        top: 84%; /* Adjust the top percentage */
+        left: 43%; /* Adjust the left percentage */
+      }
+      /* Hide India map by default */
+      .india-map {
+        display: none;
+      }
+
+      @keyframes pulse {
+        100% {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(2.5);
+        }
+      }
+     @media only screen and (max-width: 767px) {
+    /* Adjust the position of the pins for mobile screens */
+    .pin {
+      font-size: 12px; /* Modify font size for smaller screens */
+    }
+
+    /* Adjust the position of the Qatar pin on the world map */
+    .pin.Qatar {
+      top: 40%; /* Adjust the top position as needed */
+      left: 58%; /* Adjust the left position as needed */
+      transform: translate(-50%, -50%);
+    }
+
+    /* Adjust the position of the Kochi pin on the India map */
+    .pin.Kochi {
+      top: 81%; /* Adjust the top position as needed */
+      left: 33%; /* Adjust the left position as needed */
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .world-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Set a height for the map container */
+  }
+
+  .map-container {
+    position: relative;
+    max-width: 100%; /* Maximum width */
+    max-height: 100%; /* Maximum height */
+    overflow: hidden;
+  }
+
+  .india-map-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+ .world-map-img{
+
+   width: 100%;
+    height: 100%;
+    object-fit: contain;
+ }
+    </style>
+  
+    <style>
+        
+/* service */
+#service {
+    width: 100%;
+    padding:  0;
+    background: #efefef;
+    display: block;
+    padding-bottom: 140px;
+}
+
+
+.service-box {
+    width: 100%;
+    display: flex;
+    height: 110%;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    margin: auto;
+}
+
+.single-service {
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+
+.single-service img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #4e669c);
+    opacity: 0;
+    transition: 1s;
+
+}
+
+.single-service:hover .overlay {
+    opacity: 1;
+
+}
+
+.service-desc {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%);
+    transition: 1s;
+    font-size: 25px;
+}
+
+hr {
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.service-desc p {
+    font-size: 17px;
+}
+
+.single-service:hover .service-desc {
+    bottom: 40%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 770px) {
+    .single-service {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+
+    .service-desc p {
+        font-size: 12px;
+
+    }
+
+    hr {
+        margin: 5px auto;
+    }
+
+    .single-service:hover .service-desc {
+        bottom: 25% !important;
+    }
+}
+
+    </style>
+    
+
+ 
+
+  
+
+</head>
+
+
+<body>
+     <!-- Loader -->
+    <div id="gi-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header start  -->
+    <header class="gi-header">
+        <!-- Header Top Start -->
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-itegi-center">
+                  
+                    <div class="col text-center header-top-center">
+                        <div class="header-top-message">
+                          We Provide The Best Solution For Shipping in Qatar
+                        </div>
+                    </div>
+                    
+                        </div>
+                    </div>
+                    <!-- Header Top Language Currency -->
+                    <!-- Header Top responsive Action -->
+                    <div class="col header-top-res d-lg-none">
+                        <div class="gi-header-bottons">
+                            <div class="right-icons">
+                                
+                                <a href="javascript:void(0)" class="gi-header-btn gi-site-menu-icon d-lg-none">
+                                    <i class="fi-rr-menu-burger"></i>
+                                </a>
+                                <!-- Header menu End -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Header Top responsive Action -->
+                </div>
+            </div>
+        </div>
+        <!-- Header Top  End -->
+
+        <!-- Header Bottom  Start -->
+        <div class="gi-header-bottom d-lg-block">
+            <div class="container position-relative">
+                <div class="row">
+                    <div class="gi-flex">
+                        <!-- Header Logo Start -->
+                        <div class="align-self-center gi-header-logo">
+                            <div class="header-logo">
+                                <a href="index.html"><img src="assets/img/logo/logo (2).ico" alt="Site Logo" style="width: 170px;"></a>
+                            </div>
+                        </div>
+                        <!-- Header Logo End -->
+                        <!-- Header Search Start -->
+                        <div class="align-self-center gi-header-search">
+                            <div class="header-search">
+                                  <div id="gi-main-menu-desk" class="d-none d-lg-block sticky-nav">
+                        <div class="nav-desk">
+                            <div class="row">
+                                <div class="col-md-12 align-self-center">
+                                    <div class="gi-main-menu">
+                                        <ul>
+                                            <li class="non-drop">
+                                                <a href="index.html">Home</a>
+                                            </li>
+                                           
+                                            <li class="non-drop">
+                                                <a href="ouractivites.html">Our Activities</a>
+                                            </li>
+                                            <li class="dropdown drop-list">
+                                                <a href="javascript:void(0)" class="dropdown-arrow">Others<i
+                                                        class="fi-rr-angle-small-right"></i></a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="about-us.html">About Us</a></li>
+                                                    <li><a href="contact-us.html">Contact Us</a></li>
+                                                    
+                                                     <li><a href="map.html">map</a></li>
+                                                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                            </div>
+                        </div>
+                        <!-- Header Search End -->
+                        <!-- Header Button Start -->
+                        <div class="gi-header-action align-self-center">
+                            <div class="gi-header-bottons">
+                               
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Button End -->
+
+        <!-- Header menu -->
+        <div class="gi-header-cat d-none d-lg-block">
+            <div class="container position-relative">
+                <div class="gi-nav-bar">
+                   
+                                                <div class="col">
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Header menu End -->
+
+        <!-- Mobile Menu sidebar Start -->
+        <div class="gi-mobile-menu-overlay"></div>
+        <div id="gi-mobile-menu" class="gi-mobile-menu">
+            <div class="gi-menu-title">
+                <span class="menu_title">My Menu</span>
+                <button class="gi-close-menu">×</button>
+            </div>
+            <div class="gi-menu-inner">
+                <div class="gi-menu-content">
+                    <ul>
+                        <li class="non-drop">
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li class="non-drop">
+                            <a href="ouractivites.html">Our Activities</a>
+                        </li>
+                        <li><a href="javascript:void(0)">Others</a>
+                            <ul class="sub-menu">
+                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                               
+                                 <li><a href="map.html">map</a></li>
+                                
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-res-lan-curr">
+                    <!-- Social Start -->
+                    <div class="header-res-social">
+                        <div class="header-top-social">
+                            <ul class="mb-0">
+                                <li class="list-inline-item"><a href="#"><i class="gicon gi-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="gicon gi-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="gicon gi-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="gicon gi-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Social End -->
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu sidebar End -->
+    </header>
+    
+    <!-- Breadcrumb start -->
+    <div class="gi-breadcrumb m-b-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row gi_breadcrumb_inner">
+                        <div class="col-md-6 col-sm-12">
+                            <h2 class="gi-breadcrumb-title">Locations</h2>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <!-- gi-breadcrumb-list start -->
+                            <ul class="gi-breadcrumb-list">
+                                <li class="gi-breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="gi-breadcrumb-item active">Locations</li>
+                            </ul>
+                            <!-- gi-breadcrumb-list end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb end -->
+
+
+    <div class="title">
+                <h1 style="color: black;">Locations</h1>
+      <button onclick="showWorldMap()">World Map</button>
+      <button onclick="showIndiaMap()">India Map</button>
+    </div>
+
+    <div class="world-map" style="display: flex; justify-content: center; align-items: center;">
+  <img
+    src="./assets/img/hero-bg/worldmap.png"
+    alt="World map"
+    class="world-map-img"
+    style="max-width: 100%; max-height: 100%;"
+  />
+</div>
+   <div class="pin Qatar">
+        <span>Qatar</span>
+      </div>
+    </div>
+
+    <!-- India Map Section -->
+    <section class="india-map" >
+      <div class="world-map" style="display: flex; justify-content: center; align-items: center;">
+        <!-- Replace this image with your India map -->
+        <img
+          src="./assets/img/hero-bg/ind.png"
+          alt="India map"
+          class="india-map-img"
+          style="max-width: 100%; max-height: 100%;"
+        />
+
+        <!-- Kolkata Pin -->
+        <div class="pin Kochi">
+          <span>Kochi, India</span>
+        </div>
+      </div>
+    </section>
+
+                
+                
+    <!-- Trending, Top Rated End -->
+    
+    <!-- Banner section -->
+    <!-- <section class="gi-banner padding-tb-40 wow fadeInUp" data-wow-duration="2s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="gi-animated-banner" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
+                        <h2 class="d-none">Offers</h2>
+                        <div class="gi-bnr-detail">
+                            <div class="gi-bnr-info">
+                                <h2>DELTA SHIPPING AGENCIES</h2>
+                                <h3>An excellent reputation over the years with the report  from all <span>the  Corners  including ports, Customs and trade</span></h3>
+                              <a href="shop-left-sidebar-col-3.html" class="gi-btn-2">Shop now</a> -->
+                            <!-- </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --> 
+    <!-- Banner section End -->
+
+   <!-- Footer Start -->
+    <footer class="gi-footer m-t-40">
+        <div class="footer-container"style="background-image: url('assets/img/hero-bg/pexels-markus-spiske-104346.jpg');">
+            <div class="footer-top padding-tb-80">
+                <div class="container">
+                    <div class="row m-minus-991">
+                        <div class="col-sm-12 col-lg-4 gi-footer-cat wow fadeInUp">
+                            <div class="gi-footer-widget gi-footer-company">
+                                <img src="assets/img/logo/logo (2).ico" class="gi-footer-logo" alt="footer logo">
+                                <p class="gi-footer-detail">DELTA SHIPPING AGENCIES (054) is emerging as a leading shipping agent and freight forwarder in Qatar Our shipping experts offer tailored service that helps businesses to connect extensively throughout the globe. We are among few shipping companies registered under MWANI QATAR which owns and operates hamad port. We Are Under Patronage of Sheikh Muhammad Bin Nasser Fahad Jassim Al Thani</p>
+                                <!-- <div class="gi-app-store">
+                                    <a href="#" class="app-img"><img src="assets/img/app/android.png" class="adroid"
+                                            alt="apple"></a>
+                                    <a href="#" class="app-img"><img src="assets/img/app/apple.png" class="apple"
+                                            alt="apple"></a>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-2 gi-footer-info wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="gi-footer-widget">
+                                <h4 class="gi-footer-heading">Category</h4>
+                                <div class="gi-footer-links gi-footer-dropdown">
+                                    <ul class="align-itegi-center">
+                                        <li class="gi-footer-link"><a href="ouractivites.html">Shipping Agency </a></li>
+                                        <li class="gi-footer-link"><a href="ouractivites.html">Freight Forwarding</a></li>
+                                        <li class="gi-footer-link"><a href="ouractivites.html">Air freight</a>
+                                        </li>
+                                        <li class="gi-footer-link"><a href="ouractivites.html">Project Cargo</a></li>
+                                        <li class="gi-footer-link"><a href="ouractivites.html">Customs Clearance</a></li>
+                                        <li class="gi-footer-link"><a href="ouractivites.html">Transport Services</a></li>
+                                        <li class="gi-footer-link"><a href="ouractivites.html">LCL/FCL & AMP:Roro Cargo</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-sm-12 col-lg-2 gi-footer-account wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="gi-footer-widget">
+                                <h4 class="gi-footer-heading">Company</h4>
+                                <div class="gi-footer-links gi-footer-dropdown">
+                                    <ul class="align-itegi-center">
+                                        <li class="gi-footer-link"><a href="about-us.html">About us</a></li>
+                                        <li class="gi-footer-link"><a href="index.html">Home</a></li>
+                                        
+                                        <li class="gi-footer-link"><a href="privacy-policy.html">Legal Notice</a></li>
+                                        
+                                        <li class="gi-footer-link"><a href="contact-us.html">Contact us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-sm-12 col-lg-2 gi-footer-service wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="gi-footer-widget">
+                                <h4 class="gi-footer-heading">Account</h4>
+                                <div class="gi-footer-links gi-footer-dropdown">
+                                    <ul class="align-itegi-center">
+                                        <li class="gi-footer-link"><a href="contact-us.html">Contact us</a></li>
+                                        <li class="gi-footer-link"><a href="product-left-sidebar.html">Our Activities</a></li>
+                                        <li class="gi-footer-link"><a href="privacy-policy.html">Privacy Policy</a></li>
+                                        <li class="gi-footer-link"><a href="map.html">Site map</a></li>
+                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="col-sm-12 col-lg-4 gi-footer-cont-social wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="gi-footer-contact">
+                                <div class="gi-footer-widget">
+                                    <h4 class="gi-footer-heading">Contact</h4>
+                                    <div class="gi-footer-links gi-footer-dropdown">
+                                        <ul class="align-itegi-center">
+                                            <li class="gi-footer-link gi-foo-location">
+                                                <span>
+                                                    <i class="fi fi-rr-marker location svg_img foo_svg"></i>
+                                                </span>
+                                                <p>POB:60287, Office No:901, Regency Business Center 2, Old Customs Buliding, Opposite to MIA Park, Corniche Road, Doha-Qatar.</p>
+                                            </li>
+                                            <li class="gi-footer-link gi-foo-call">
+                                                <span>
+                                                    <i class="fi fi-brands-whatsapp svg_img foo_svg"></i>
+                                                </span>
+                                                <a href="tel:+974 4468 4086">+974 4468 4086</a>
+                                            </li>
+                                            <li class="gi-footer-link gi-foo-mail">
+                                                <span>
+                                                    <i class="fi fi-rr-envelope"></i>
+                                                </span>
+                                                <a href="mailto:example@email.com">example@email.com</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gi-footer-social">
+                                <div class="gi-footer-widget">
+                                    <div class="gi-footer-links gi-footer-dropdown">
+                                        <ul class="align-itegi-center">
+                                            <li class="gi-footer-link"><a href="#"><i class="gicon gi-facebook"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li class="gi-footer-link"><a href="#"><i class="gicon gi-twitter"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li class="gi-footer-link"><a href="#"><i class="gicon gi-linkedin"
+                                                        aria-hidden="true"></i></a></li>
+                                            <li class="gi-footer-link"><a href="#"><i class="gicon gi-instagram"
+                                                        aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="gi-bottom-info">
+                            <!-- Footer Copyright Start -->
+                            <div class="footer-copy">
+                                <div class="footer-bottom-copy ">
+                                    <div class="gi-copy">Copyright © <a class="site-name" href="index.html">Delta Shipping Agencies<a>
+                                        all
+                                        rights reserved. Powered by Delta Shipping Agencies.</div>
+                                </div>
+                            </div>
+                            <!-- Footer Copyright End -->
+                            <!-- Footer payment -->
+                            <div class="footer-bottom-right">
+                                <!-- <div class="footer-bottom-payment d-flex justify-content-center">
+                                    <div class="payment-link">
+                                        <img src="assets/img/hero-bg/payment.png" alt="payment">
+                                    </div> -->
+    
+                                </div>
+                            </div>
+                            <!-- Footer payment -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top  -->
+    <a class="gi-back-to-top"></a>
+
+    <!-- Plugins JS -->
+    <script src="assets/js/plugins/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/plugins/popper.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/bootstrap-select.min.js"></script>
+    <script src="assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="assets/js/plugins/fontawesome.js"></script>
+    <script src="assets/js/plugins/owl.carousel.min.js"></script>
+    <!-- <script src="assets/js/plugins/countdownTimer.js"></script> -->
+    <script src="assets/js/plugins/infiniteslidev2.js"></script>
+    <script src="assets/js/plugins/jquery.zoom.min.js"></script>
+    <script src="assets/js/plugins/slick.min.js"></script>
+    <script src="assets/js/plugins/nouislider.js"></script>
+    <script src="assets/js/plugins/wow.js"></script>
+
+
+    <!-- Main Js -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/demo-1.js"></script>
+     <script>
+      function showWorldMap() {
+        document.querySelector(".world-map").style.display = "block";
+        document.querySelector(".india-map").style.display = "none";
+      }
+
+      function showIndiaMap() {
+        document.querySelector(".world-map").style.display = "none";
+        document.querySelector(".india-map").style.display = "block";
+      }
+    </script>
+</body>
+</html>
